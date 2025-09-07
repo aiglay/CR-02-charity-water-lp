@@ -1,0 +1,140 @@
+/* Colors */
+:root {
+  --yellow: #FFC928;
+  --blue: #7BA2B3;
+  --text: #111;
+  --shadow: 0 8px 24px rgba(0,0,0,.1);
+  --radius: 16px;
+}
+
+/* Reset */
+body, h1, p { margin: 0; }
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Header */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand { text-decoration: none; color: var(--text); font-weight: bold; font-size: 24px; }
+.btn-pill {
+  background: var(--yellow);
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+.brand-icon {
+  width: 20px;   /* adjust number to make it bigger/smaller */
+  height: auto;  /* keeps proportions correct */
+  display: inline-block;
+  vertical-align: left;
+}
+
+/* Hero */
+.hero {
+  background: var(--yellow);
+  padding: 40px 20px 80px;
+  position: relative;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 800px) {
+  .hero-grid { grid-template-columns: 1fr; }
+}
+.hero-left h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.subhead { font-size: 18px; margin-bottom: 16px; }
+.thick-line {
+  height: 5px;
+  background: var(--blue);
+  border: none;
+  border-radius: 3px;
+  margin: 20px 0;
+  width: 60%;
+}
+
+/* CTA buttons */
+.cta-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-main {
+  background: var(--blue);
+  color: white;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-outline {
+  border: 2px solid #333;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  background: white;
+}
+
+/* Hero image */
+.hero-right {
+  position: relative;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.hero-right img {
+  width: 100%;
+  display: block;
+}
+.hero-right figcaption {
+  position: absolute;
+  top: 10px;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+
+/* Slant */
+.hero-diagonal {
+  position: absolute;
+  bottom: -50px;
+  left: 0; right: 0;
+  height: 120px;
+  background: var(--yellow);
+  transform: skewY(-8deg);
+}
+
+/* Footer */
+.site-footer {
+  padding: 30px 20px;
+  text-align: right;
+  font-weight: bold;
+}
+/* Force logo sizing */
+.brand-icon {
+  width: 20px !important;   /* try 40px, smaller than before */
+  height: auto !important;
+  display: inline-block !important;
+}
+
+
+
+
